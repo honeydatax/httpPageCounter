@@ -1,0 +1,38 @@
+' Gambas class file
+
+Public Sub _new()
+
+End
+
+Public Sub Form_Open()
+Button1_Click()
+End
+
+Public Sub Timer1_Timer()
+End
+
+Public Sub Button1_Click()
+  Dim ss As String
+  Dim ss1 As String[]
+  Dim i As Integer
+  Shell "ps -ax " To ss
+  ss1 = Split(ss, gb.CrLf)
+  For i = 0 To ss1.Count - 1
+    listBox1.Add(ss1[i])
+  Next
+End
+
+Public Sub ListBox1_Click()
+Dim ii As Integer
+Dim i As Integer
+Dim h As String
+  i = Message("delete process?" & ListBox1.Text, "yes")
+  If i = 1 Then
+    h = Trim(listBox1.Text)
+    ii = InStr(h, " ")
+    h = Trim(h)
+    If ii > 0 Then h = Mid(h, 1, ii)
+    Shell "kill " & h 
+  Endif
+
+End

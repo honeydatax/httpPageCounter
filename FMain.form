@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,50,50)
+  { Button1 Button
+    MoveScaled(1,1,29,4)
+    ToolTip = ("refresh")
+    Text = ("refresh")
+  }
+  { ListBox1 ListBox
+    MoveScaled(1,6,48,43)
+    Font = Font["FreeMono,+4"]
+    ScrollBar = Scroll.Both
+  }
+  { Timer1 #Timer
+    #MoveScaled(36,0)
+    Delay = 750
+  }
+}
