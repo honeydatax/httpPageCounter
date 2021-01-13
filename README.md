@@ -1,4 +1,6 @@
-# Xprocess
-Xprocess gambas process aplication kill model
+# httpPageCounter
+simply page counter 
+http page counter
 
-came to help to make you version of xprocess
+
+
