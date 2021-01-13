@@ -34,7 +34,7 @@ Public Sub Socket_closed()
 End
 Public Sub Srv_Connection(Host As String)
   Dim mysock As Socket
-  idxss = 0
+  
       mysock = Srv.Accept()
       Clients.Add(mysock)     
 End
